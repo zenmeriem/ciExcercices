@@ -10,10 +10,17 @@
     "test": "node --test",
     "build": "echo 'No build step required for this simple application'"
   },
-  "keywords": ["devops", "tutorial", "express"],
+  "keywords": [
+    "devops",
+    "tutorial",
+    "express"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
   }
 }
