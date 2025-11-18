@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Verify files exist
+        run: |
+          test -f package.json
+          echo "✅ package.json found"
