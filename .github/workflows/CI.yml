@@ -44,6 +44,6 @@ jobs:
           push: true
           tags: |
             ghcr.io/zenmeriem/ciexcercices:latest
-            ghcr.io/zenmeriem/ciexcercices:$ {{ github.sha }}
+            ghcr.io/zenmeriem/ciexcercices:${{ github.sha }}
      
             
