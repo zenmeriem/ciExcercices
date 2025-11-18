@@ -43,5 +43,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository | toLower }}:latest
-            ghcr.io/${{ github.repository | toLower }}:$ {{ github.sha }}
+            ghcr.io/zenmeriem/ciexcercices:latest
+            ghcr.io/zenmeriem/ciexcercices:$ {{ github.sha }}
+     
+            
