@@ -1,6 +1,6 @@
 {
-  "name": "nodejs-server-example",
-  "version": "1.0.0",
+  "name": "nodejs-server-example-meriem",
+  "version": "1.0.1",
   "description": "Sample Node.js HTTP server for DevOps tutorial",
   "type": "module",
   "main": "server.js",
