@@ -65,5 +65,5 @@ jobs:
         run: npm test
       - name: Publish package
         if: github.ref == 'refs/heads/main'
-        run: npm publish
+        run: npm publish --registry https://trialsga2025.jfrog.io/artifactory/api/npm/sga-npm/
             
