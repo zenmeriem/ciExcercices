@@ -45,5 +45,25 @@ jobs:
           tags: |
             ghcr.io/zenmeriem/ciexcercices:latest
             ghcr.io/zenmeriem/ciexcercices:${{ github.sha }}
-     
+ Day4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Login to Artifactory npm registry
+      - name: Setup npm registry
+        run: |
+          echo "registry=https://trialsga2025.jfrog.io/artifactory/api/npm/sga-npm/" > .npmrc
+          echo "//trialsga2025.jfrog.io/artifactory/api/npm/sga-npm/:_authToken=${{ secrets.ARTIFACTORY_TOKEN }}" >> .npmrc    
+
+      # Standard Node.js workdflow...
+      - name: Install dependencies
+        run: npm ci  # Uses Artifactory for downloads
+      - name: Build
+        run: npm run build
+      - name: Test
+        run: npm test
+      - name: Publish package
+        if: github.ref == 'refs/heads/main'
+        run: npm publish
             
